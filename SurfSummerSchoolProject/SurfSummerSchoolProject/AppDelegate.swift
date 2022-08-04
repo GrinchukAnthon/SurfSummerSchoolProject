@@ -13,16 +13,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//        print("Приложение запущено")
         window = UIWindow(frame: UIScreen.main.bounds)
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = .red
-        window?.rootViewController = viewController
+//        let viewController = UIViewController()
+//        viewController.view.backgroundColor = .red
+//        window?.rootViewController = viewController
         window?.makeKeyAndVisible()
+        goToMain()
         return true
     }
 
-
+    func goToMain() {
+        window?.rootViewController = TabBarConfigurator().configure()
+    }
 
 }
 
