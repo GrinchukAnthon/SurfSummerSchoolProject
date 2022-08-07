@@ -32,6 +32,16 @@ class MainItemCollectionViewCell: UICollectionViewCell {
         return isFavorite ? Constants.heartImage : Constants.fillHeartImage
     }
     
+//    MARK: - Animate
+    
+    override var isHighlighted: Bool {
+        didSet {
+            UIView.animate(withDuration: 0) {
+                self.contentView.transform = self.isHighlighted ? CGAffineTransform(scaleX: 0.9, y: 0.9) : .identity
+            }
+        }
+    }
+    
 //    MARK: - Properties
     
     var title: String = "" {

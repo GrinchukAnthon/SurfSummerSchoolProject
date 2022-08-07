@@ -9,20 +9,23 @@ import UIKit
 
 final class ProfileViewController: UIViewController {
 
+//    MARK: - UIViewController
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureApperance()
     }
 }
 
+//  MARK: - Private Methods
 
 private extension ProfileViewController {
     
     func configureApperance() {
-        navigationBarConfigure()
+        configureNavigationBar()
     }
     
-    func navigationBarConfigure() {
+    func configureNavigationBar() {
         navigationItem.title = "Профиль"
     }
 }

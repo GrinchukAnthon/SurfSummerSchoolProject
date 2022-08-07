@@ -25,7 +25,7 @@ final class MainViewController: UIViewController {
     
     @IBOutlet private weak var collectionView: UICollectionView!
     
-//    MARK: - Lifecyrcle
+//    MARK: - UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,12 +39,16 @@ final class MainViewController: UIViewController {
 private extension MainViewController {
     
     func configureApperance() {
+        configureCollectionView()
+        configureNavigationBar()
+        configureModel()
+    }
+    
+    func configureCollectionView() {
         collectionView.register(UINib(nibName: "\(MainItemCollectionViewCell.self)", bundle: .main), forCellWithReuseIdentifier: "\(MainItemCollectionViewCell.self)")
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.contentInset = .init(top: 10, left: 16, bottom: 10, right: 16)
-        navigationBarConfigure()
-        configureModel()
     }
     
     func configureModel() {
@@ -53,7 +57,7 @@ private extension MainViewController {
         }
     }
     
-    func navigationBarConfigure() {
+    func configureNavigationBar() {
         navigationItem.title = "Главная"
     }
 }
@@ -91,5 +95,11 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return Constants.spaceBetweenElements
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = DetailViewController()
+        vc.model = model.items[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

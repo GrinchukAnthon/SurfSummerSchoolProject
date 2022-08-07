@@ -9,19 +9,23 @@ import UIKit
 
 final class FavoriteViewController: UIViewController {
 
+//    MARK: - UIViewController
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureApperance()
     }
 }
 
+//  MARK: - Private Methods
+
 private extension FavoriteViewController {
     
     func configureApperance() {
-        navigationBarConfigure()
+        configureNavigationBar()
     }
     
-    func navigationBarConfigure() {
+    func configureNavigationBar() {
         navigationItem.title = "Избранное"
     }
 }
