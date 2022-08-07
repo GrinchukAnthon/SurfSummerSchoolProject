@@ -38,5 +38,4 @@ enum TabBarModel {
     var selectedImage: UIImage? {
         return image
     }
-    
 }

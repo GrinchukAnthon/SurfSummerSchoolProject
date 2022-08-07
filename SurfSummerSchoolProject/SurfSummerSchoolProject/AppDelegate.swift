@@ -14,15 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-//        let viewController = UIViewController()
-//        viewController.view.backgroundColor = .red
-//        window?.rootViewController = viewController
         window?.makeKeyAndVisible()
-        goToMain()
+        runMainFlow()
         return true
     }
 
-    func goToMain() {
+    func runMainFlow() {
         window?.rootViewController = TabBarConfigurator().configure()
     }
 

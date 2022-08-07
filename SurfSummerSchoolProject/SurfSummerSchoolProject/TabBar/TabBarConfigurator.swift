@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-class TabBarConfigurator {
+final class TabBarConfigurator {
     
-//   MARK: - Private property
+//   MARK: - Private Properties
     
     private let allTab: [TabBarModel] = [.main, .favorite, .profile]
     
@@ -19,9 +19,9 @@ class TabBarConfigurator {
     func configure() -> UITabBarController {
         return getTabBarController()
     }
-    
 }
 
+//MARK: - Private Methods
 
 private extension TabBarConfigurator {
     
@@ -39,11 +39,12 @@ private extension TabBarConfigurator {
         
         allTab.forEach { tab in
             let controller = getCurrentViewController(tab: tab)
+            let navigationController = UINavigationController(rootViewController: controller)
             let tabBarItem = UITabBarItem (title: tab.title,
                                            image: tab.image,
                                            selectedImage: tab.selectedImage)
             controller.tabBarItem = tabBarItem
-            viewControllers.append(controller)
+            viewControllers.append(navigationController)
         }
         return viewControllers
     }
@@ -58,5 +59,4 @@ private extension TabBarConfigurator {
             return ProfileViewController()
         }
     }
-    
 }

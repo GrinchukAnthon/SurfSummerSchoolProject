@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C980D8E5289ABE7F000C2727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C980D8E4289ABE7F000C2727 /* AppDelegate.swift */; };
-		C980D8EC289ABE7F000C2727 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C980D8EA289ABE7F000C2727 /* Main.storyboard */; };
 		C980D8EE289ABE80000C2727 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C980D8ED289ABE80000C2727 /* Assets.xcassets */; };
 		C980D8F1289ABE80000C2727 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C980D8EF289ABE80000C2727 /* LaunchScreen.storyboard */; };
 		C980D8FA289ADEEB000C2727 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C980D8F8289ADEEB000C2727 /* MainViewController.swift */; };
@@ -19,12 +18,14 @@
 		C980D907289AE0C9000C2727 /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C980D905289AE0C9000C2727 /* FavoriteViewController.xib */; };
 		C980D90B289AE179000C2727 /* TabBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C980D90A289AE179000C2727 /* TabBarModel.swift */; };
 		C980D90D289BA8CB000C2727 /* TabBarConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C980D90C289BA8CB000C2727 /* TabBarConfigurator.swift */; };
+		C980D90F289BFD54000C2727 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C980D90E289BFD54000C2727 /* MainModel.swift */; };
+		C980D913289C03C3000C2727 /* MainItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C980D911289C03C3000C2727 /* MainItemCollectionViewCell.swift */; };
+		C980D914289C03C3000C2727 /* MainItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C980D912289C03C3000C2727 /* MainItemCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C980D8E1289ABE7F000C2727 /* SurfSummerSchoolProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurfSummerSchoolProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C980D8E4289ABE7F000C2727 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C980D8EB289ABE7F000C2727 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C980D8ED289ABE80000C2727 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C980D8F0289ABE80000C2727 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C980D8F2289ABE80000C2727 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +37,9 @@
 		C980D905289AE0C9000C2727 /* FavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
 		C980D90A289AE179000C2727 /* TabBarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModel.swift; sourceTree = "<group>"; };
 		C980D90C289BA8CB000C2727 /* TabBarConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarConfigurator.swift; sourceTree = "<group>"; };
+		C980D90E289BFD54000C2727 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		C980D911289C03C3000C2727 /* MainItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		C980D912289C03C3000C2727 /* MainItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainItemCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +93,10 @@
 		C980D901289AE01D000C2727 /* MainModel */ = {
 			isa = PBXGroup;
 			children = (
+				C980D910289C0390000C2727 /* Cells */,
 				C980D8F8289ADEEB000C2727 /* MainViewController.swift */,
 				C980D8F9289ADEEB000C2727 /* MainViewController.xib */,
+				C980D90E289BFD54000C2727 /* MainModel.swift */,
 			);
 			path = MainModel;
 			sourceTree = "<group>";
@@ -116,7 +122,6 @@
 		C980D908289AE11B000C2727 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				C980D8EA289ABE7F000C2727 /* Main.storyboard */,
 				C980D8ED289ABE80000C2727 /* Assets.xcassets */,
 				C980D8EF289ABE80000C2727 /* LaunchScreen.storyboard */,
 				C980D8F2289ABE80000C2727 /* Info.plist */,
@@ -131,6 +136,15 @@
 				C980D90C289BA8CB000C2727 /* TabBarConfigurator.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		C980D910289C0390000C2727 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C980D911289C03C3000C2727 /* MainItemCollectionViewCell.swift */,
+				C980D912289C03C3000C2727 /* MainItemCollectionViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,8 +207,8 @@
 			files = (
 				C980D8F1289ABE80000C2727 /* LaunchScreen.storyboard in Resources */,
 				C980D8EE289ABE80000C2727 /* Assets.xcassets in Resources */,
+				C980D914289C03C3000C2727 /* MainItemCollectionViewCell.xib in Resources */,
 				C980D907289AE0C9000C2727 /* FavoriteViewController.xib in Resources */,
-				C980D8EC289ABE7F000C2727 /* Main.storyboard in Resources */,
 				C980D8FF289ADF82000C2727 /* ProfileViewController.xib in Resources */,
 				C980D8FB289ADEEB000C2727 /* MainViewController.xib in Resources */,
 			);
@@ -210,6 +224,8 @@
 				C980D8FA289ADEEB000C2727 /* MainViewController.swift in Sources */,
 				C980D8FE289ADF82000C2727 /* ProfileViewController.swift in Sources */,
 				C980D8E5289ABE7F000C2727 /* AppDelegate.swift in Sources */,
+				C980D90F289BFD54000C2727 /* MainModel.swift in Sources */,
+				C980D913289C03C3000C2727 /* MainItemCollectionViewCell.swift in Sources */,
 				C980D906289AE0C9000C2727 /* FavoriteViewController.swift in Sources */,
 				C980D90D289BA8CB000C2727 /* TabBarConfigurator.swift in Sources */,
 				C980D90B289AE179000C2727 /* TabBarModel.swift in Sources */,
@@ -219,14 +235,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C980D8EA289ABE7F000C2727 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C980D8EB289ABE7F000C2727 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C980D8EF289ABE80000C2727 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -7,13 +7,22 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+final class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+        configureApperance()
     }
+}
 
 
+private extension ProfileViewController {
+    
+    func configureApperance() {
+        navigationBarConfigure()
+    }
+    
+    func navigationBarConfigure() {
+        navigationItem.title = "Профиль"
+    }
 }
