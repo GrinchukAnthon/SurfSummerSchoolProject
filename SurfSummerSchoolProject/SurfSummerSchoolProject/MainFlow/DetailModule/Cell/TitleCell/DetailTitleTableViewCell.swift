@@ -45,6 +45,6 @@ private extension DetailTitleTableViewCell {
         selectionStyle = .none
         cartTitleLabel.font = .systemFont(ofSize: 16)
         dateLable.font = .systemFont(ofSize: 10)
-        dateLable.textColor = UIColor(displayP3Red: 0xB3 / 255, green: 0xB3 / 255, blue: 0xB3 / 255, alpha: 1)
+        dateLable.textColor = .surfGrey
     }
 }

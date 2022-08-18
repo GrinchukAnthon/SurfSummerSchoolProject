@@ -5,7 +5,6 @@
 //  Created by Антон Гринчук on 03.08.2022.
 //
 
-import Foundation
 import UIKit
 
 enum TabBarModel {
@@ -27,11 +26,11 @@ enum TabBarModel {
     var image: UIImage? {
         switch self {
         case .main:
-            return UIImage(named: "mainTab")
+            return UIImage(assetIdentifier: .mainTab)
         case .favorite:
-            return UIImage(named: "favoriteTab")
+            return UIImage(assetIdentifier: .favoriteTab)
         case .profile:
-            return UIImage(named: "profileTab")
+            return UIImage(assetIdentifier: .profileTab)
         }
     }
     
