@@ -12,8 +12,8 @@ class MainItemCollectionViewCell: UICollectionViewCell {
 //    MARK: - Constants
     
     private enum Constants {
-        static let fillHeartImage = UIImage(named: "heart-fill")
-        static let heartImage = UIImage(named: "heart")
+        static let fillHeartImage = UIImage(assetIdentifier: .heartFill)
+        static let heartImage = UIImage(assetIdentifier: .heart)
     }
     
 //    MARK: - Views
@@ -37,7 +37,7 @@ class MainItemCollectionViewCell: UICollectionViewCell {
     override var isHighlighted: Bool {
         didSet {
             UIView.animate(withDuration: 0) {
-                self.contentView.transform = self.isHighlighted ? CGAffineTransform(scaleX: 0.9, y: 0.9) : .identity
+                self.contentView.transform = self.isHighlighted ? CGAffineTransform(scaleX: 0.95, y: 0.95) : .identity
             }
         }
     }

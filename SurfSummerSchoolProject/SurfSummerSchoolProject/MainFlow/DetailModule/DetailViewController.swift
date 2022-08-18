@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class DetailViewController: UIViewController, UIGestureRecognizerDelegate {
+final class DetailViewController: UIViewController {
 
 //    MARK: - View
     
@@ -21,13 +21,14 @@ final class DetailViewController: UIViewController, UIGestureRecognizerDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureNavigationBar()
         configureAppearance()
         detailTableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        configureNavigationBar()
+        createBackArrowButtonInNavBar()
     }
 }
 
@@ -49,13 +50,6 @@ private extension DetailViewController {
     
     func configureNavigationBar() {
         navigationItem.title = model?.title
-        let backButton = UIBarButtonItem(image: UIImage(named: "back-arrow"),
-                                         style: .plain,
-                                         target: navigationController,
-                                         action: #selector(UINavigationController.popViewController(animated:)))
-        navigationItem.leftBarButtonItem = backButton
-        navigationItem.leftBarButtonItem?.tintColor = .black
-        navigationController?.interactivePopGestureRecognizer?.delegate = self
     }
 }
 

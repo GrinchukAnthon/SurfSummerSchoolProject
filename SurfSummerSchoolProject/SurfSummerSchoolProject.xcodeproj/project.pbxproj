@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C957DDCD28A0E3B3004AB4B7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C957DDCB28A0E3B3004AB4B7 /* SearchViewController.swift */; };
+		C957DDCE28A0E3B3004AB4B7 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C957DDCC28A0E3B3004AB4B7 /* SearchViewController.xib */; };
 		C980D8E5289ABE7F000C2727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C980D8E4289ABE7F000C2727 /* AppDelegate.swift */; };
 		C980D8EE289ABE80000C2727 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C980D8ED289ABE80000C2727 /* Assets.xcassets */; };
 		C980D8F1289ABE80000C2727 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C980D8EF289ABE80000C2727 /* LaunchScreen.storyboard */; };
@@ -30,9 +32,15 @@
 		C980D928289FBD8B000C2727 /* DetailTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C980D926289FBD8B000C2727 /* DetailTextTableViewCell.swift */; };
 		C980D929289FBD8B000C2727 /* DetailTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C980D927289FBD8B000C2727 /* DetailTextTableViewCell.xib */; };
 		C980D92B289FCC7F000C2727 /* DetailItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C980D92A289FCC7F000C2727 /* DetailItemModel.swift */; };
+		C9BAD58A28AB88010083CA8E /* Extension UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BAD58928AB88010083CA8E /* Extension UIColor.swift */; };
+		C9BAD58C28ABAE050083CA8E /* CreateButtonsInNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BAD58B28ABAE050083CA8E /* CreateButtonsInNavBar.swift */; };
+		C9BAD58E28ABBD3D0083CA8E /* Extension UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BAD58D28ABBD3D0083CA8E /* Extension UIImage.swift */; };
+		C9BAD59028ACE1E20083CA8E /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BAD58F28ACE1E20083CA8E /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C957DDCB28A0E3B3004AB4B7 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		C957DDCC28A0E3B3004AB4B7 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		C980D8E1289ABE7F000C2727 /* SurfSummerSchoolProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurfSummerSchoolProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C980D8E4289ABE7F000C2727 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C980D8ED289ABE80000C2727 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,6 +66,10 @@
 		C980D926289FBD8B000C2727 /* DetailTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTextTableViewCell.swift; sourceTree = "<group>"; };
 		C980D927289FBD8B000C2727 /* DetailTextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTextTableViewCell.xib; sourceTree = "<group>"; };
 		C980D92A289FCC7F000C2727 /* DetailItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailItemModel.swift; sourceTree = "<group>"; };
+		C9BAD58928AB88010083CA8E /* Extension UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension UIColor.swift"; sourceTree = "<group>"; };
+		C9BAD58B28ABAE050083CA8E /* CreateButtonsInNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateButtonsInNavBar.swift; sourceTree = "<group>"; };
+		C9BAD58D28ABBD3D0083CA8E /* Extension UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension UIImage.swift"; sourceTree = "<group>"; };
+		C9BAD58F28ACE1E20083CA8E /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +83,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C957DDCA28A0E122004AB4B7 /* SearchModule */ = {
+			isa = PBXGroup;
+			children = (
+				C957DDCB28A0E3B3004AB4B7 /* SearchViewController.swift */,
+				C957DDCC28A0E3B3004AB4B7 /* SearchViewController.xib */,
+				C9BAD58F28ACE1E20083CA8E /* SearchView.swift */,
+			);
+			path = SearchModule;
+			sourceTree = "<group>";
+		};
 		C980D8D8289ABE7F000C2727 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +115,7 @@
 				C980D8E4289ABE7F000C2727 /* AppDelegate.swift */,
 				C980D909289AE14A000C2727 /* TabBar */,
 				C980D900289AE00B000C2727 /* MainFlow */,
+				C9BAD59128AD11D60083CA8E /* Extension */,
 				C980D908289AE11B000C2727 /* Application */,
 			);
 			path = SurfSummerSchoolProject;
@@ -101,15 +124,16 @@
 		C980D900289AE00B000C2727 /* MainFlow */ = {
 			isa = PBXGroup;
 			children = (
+				C957DDCA28A0E122004AB4B7 /* SearchModule */,
 				C980D915289FA9E8000C2727 /* DetailModule */,
-				C980D901289AE01D000C2727 /* MainModel */,
-				C980D903289AE066000C2727 /* FavoriteModel */,
-				C980D902289AE044000C2727 /* ProfileModel */,
+				C980D901289AE01D000C2727 /* MainModule */,
+				C980D903289AE066000C2727 /* FavoriteModule */,
+				C980D902289AE044000C2727 /* ProfileModule */,
 			);
 			path = MainFlow;
 			sourceTree = "<group>";
 		};
-		C980D901289AE01D000C2727 /* MainModel */ = {
+		C980D901289AE01D000C2727 /* MainModule */ = {
 			isa = PBXGroup;
 			children = (
 				C980D910289C0390000C2727 /* Cells */,
@@ -117,25 +141,25 @@
 				C980D8F9289ADEEB000C2727 /* MainViewController.xib */,
 				C980D90E289BFD54000C2727 /* MainModel.swift */,
 			);
-			path = MainModel;
+			path = MainModule;
 			sourceTree = "<group>";
 		};
-		C980D902289AE044000C2727 /* ProfileModel */ = {
+		C980D902289AE044000C2727 /* ProfileModule */ = {
 			isa = PBXGroup;
 			children = (
 				C980D8FC289ADF82000C2727 /* ProfileViewController.swift */,
 				C980D8FD289ADF82000C2727 /* ProfileViewController.xib */,
 			);
-			path = ProfileModel;
+			path = ProfileModule;
 			sourceTree = "<group>";
 		};
-		C980D903289AE066000C2727 /* FavoriteModel */ = {
+		C980D903289AE066000C2727 /* FavoriteModule */ = {
 			isa = PBXGroup;
 			children = (
 				C980D904289AE0C9000C2727 /* FavoriteViewController.swift */,
 				C980D905289AE0C9000C2727 /* FavoriteViewController.xib */,
 			);
-			path = FavoriteModel;
+			path = FavoriteModule;
 			sourceTree = "<group>";
 		};
 		C980D908289AE11B000C2727 /* Application */ = {
@@ -214,6 +238,16 @@
 			path = TextCell;
 			sourceTree = "<group>";
 		};
+		C9BAD59128AD11D60083CA8E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C9BAD58B28ABAE050083CA8E /* CreateButtonsInNavBar.swift */,
+				C9BAD58928AB88010083CA8E /* Extension UIColor.swift */,
+				C9BAD58D28ABBD3D0083CA8E /* Extension UIImage.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -279,6 +313,7 @@
 				C980D914289C03C3000C2727 /* MainItemCollectionViewCell.xib in Resources */,
 				C980D907289AE0C9000C2727 /* FavoriteViewController.xib in Resources */,
 				C980D924289FB7E3000C2727 /* DetailTitleTableViewCell.xib in Resources */,
+				C957DDCE28A0E3B3004AB4B7 /* SearchViewController.xib in Resources */,
 				C980D8FF289ADF82000C2727 /* ProfileViewController.xib in Resources */,
 				C980D91F289FB483000C2727 /* DetailImageTableViewCell.xib in Resources */,
 				C980D8FB289ADEEB000C2727 /* MainViewController.xib in Resources */,
@@ -297,14 +332,19 @@
 				C980D8FE289ADF82000C2727 /* ProfileViewController.swift in Sources */,
 				C980D928289FBD8B000C2727 /* DetailTextTableViewCell.swift in Sources */,
 				C980D923289FB7E3000C2727 /* DetailTitleTableViewCell.swift in Sources */,
+				C9BAD58E28ABBD3D0083CA8E /* Extension UIImage.swift in Sources */,
 				C980D8E5289ABE7F000C2727 /* AppDelegate.swift in Sources */,
 				C980D92B289FCC7F000C2727 /* DetailItemModel.swift in Sources */,
 				C980D90F289BFD54000C2727 /* MainModel.swift in Sources */,
+				C957DDCD28A0E3B3004AB4B7 /* SearchViewController.swift in Sources */,
 				C980D913289C03C3000C2727 /* MainItemCollectionViewCell.swift in Sources */,
 				C980D906289AE0C9000C2727 /* FavoriteViewController.swift in Sources */,
 				C980D90D289BA8CB000C2727 /* TabBarConfigurator.swift in Sources */,
+				C9BAD58C28ABAE050083CA8E /* CreateButtonsInNavBar.swift in Sources */,
+				C9BAD59028ACE1E20083CA8E /* SearchView.swift in Sources */,
 				C980D91E289FB483000C2727 /* DetailImageTableViewCell.swift in Sources */,
 				C980D90B289AE179000C2727 /* TabBarModel.swift in Sources */,
+				C9BAD58A28AB88010083CA8E /* Extension UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
