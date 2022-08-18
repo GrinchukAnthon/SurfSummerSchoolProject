@@ -80,11 +80,11 @@ class MainItemCollectionViewCell: UICollectionViewCell {
 private extension MainItemCollectionViewCell {
     
     func configureAppearance() {
-        titleLabel.textColor = .black
+        titleLabel.textColor = .surfBlack
         titleLabel.font = .systemFont(ofSize: 12)
         
         imageView.layer.cornerRadius = 12
         
-        favoriteButton.tintColor = .white
+        favoriteButton.tintColor = .surfWhite
     }
 }

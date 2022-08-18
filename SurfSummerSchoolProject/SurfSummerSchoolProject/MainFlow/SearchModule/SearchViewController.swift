@@ -12,14 +12,13 @@ final class SearchViewController: UIViewController {
 //    MARK: - Properties
     private var searchView = SearchView()
     
-
 //    MARK: - UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
-
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         createBackArrowButtonInNavBar()

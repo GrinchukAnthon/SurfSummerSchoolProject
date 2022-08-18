@@ -36,7 +36,7 @@ private extension DetailTextTableViewCell {
     func configureAppearence() {
         selectionStyle = .none
         contentLabel.font = .systemFont(ofSize: 12, weight: .light)
-        contentLabel.textColor = .black
+        contentLabel.textColor = .surfBlack
         contentLabel.numberOfLines = 0
     }
 }

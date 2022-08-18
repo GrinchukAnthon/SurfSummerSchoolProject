@@ -15,7 +15,7 @@ extension UIViewController: UIGestureRecognizerDelegate {
                                          target: navigationController,
                                          action: #selector(UINavigationController.popViewController(animated:)))
         navigationItem.leftBarButtonItem = backButton
-        navigationItem.leftBarButtonItem?.tintColor = .black
+        navigationItem.leftBarButtonItem?.tintColor = .surfBlack
         navigationController?.interactivePopGestureRecognizer?.delegate = self
     }
     
@@ -25,7 +25,7 @@ extension UIViewController: UIGestureRecognizerDelegate {
                                            target: self,
                                            action: #selector(searchButtonTapped(_:)))
         navigationItem.rightBarButtonItem = searchButton
-        navigationItem.rightBarButtonItem?.tintColor = .black
+        navigationItem.rightBarButtonItem?.tintColor = .surfBlack
     }
     
     @objc func searchButtonTapped(_: UIBarButtonItem) {
