@@ -11,14 +11,13 @@ final class SearchView: UIView {
     
     var textFieldChanged: ((_ text: String?) -> Void)?
     
-    private lazy var containverView = UIView()
+    private lazy var containerView = UIView()
     private lazy var searchIcon = UIImageView()
     private lazy var textField = UITextField()
     private lazy var clearButton = UIButton()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupView()
         setupViews()
         setupLayout()
     }
@@ -27,15 +26,16 @@ final class SearchView: UIView {
         super.init(coder: coder)
     }
     
-    private func setupView() {
-        containverView.backgroundColor = .surfLightGrey
-        containverView.layer.cornerRadius = 16
-    }
-    
     private func setupViews() {
+        setupContainerView()
         setupSearchIcon()
         setupTextField()
         setupClearButton()
+    }
+    
+    private func setupContainerView() {
+        containerView.backgroundColor = .surfLightGrey
+        containerView.layer.cornerRadius = 16
     }
     
     private func setupSearchIcon() {
@@ -75,36 +75,36 @@ final class SearchView: UIView {
     }
     
     private func setupLayout() {
-        addSubview(containverView)
-        containverView.addSubview(searchIcon)
-        containverView.addSubview(textField)
-        containverView.addSubview(clearButton)
+        addSubview(containerView)
+        containerView.addSubview(searchIcon)
+        containerView.addSubview(textField)
+        containerView.addSubview(clearButton)
         
-        containverView.translatesAutoresizingMaskIntoConstraints = false
+        containerView.translatesAutoresizingMaskIntoConstraints = false
         searchIcon.translatesAutoresizingMaskIntoConstraints = false
         textField.translatesAutoresizingMaskIntoConstraints = false
         clearButton.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            containverView.topAnchor.constraint(equalTo: topAnchor, constant: 5),
-            containverView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            containverView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5),
-            containverView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            containerView.topAnchor.constraint(equalTo: topAnchor, constant: 5),
+            containerView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            containerView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5),
+            containerView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             
-            searchIcon.leadingAnchor.constraint(equalTo: containverView.leadingAnchor, constant: 10),
-            searchIcon.topAnchor.constraint(equalTo: containverView.topAnchor, constant: 7),
-            searchIcon.bottomAnchor.constraint(equalTo: containverView.bottomAnchor, constant: -7),
+            searchIcon.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 10),
+            searchIcon.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 7),
+            searchIcon.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -7),
             searchIcon.widthAnchor.constraint(equalToConstant: 18),
             searchIcon.heightAnchor.constraint(equalToConstant: 18),
             
             textField.leadingAnchor.constraint(equalTo: searchIcon.trailingAnchor, constant: 10),
             textField.trailingAnchor.constraint(equalTo: clearButton.leadingAnchor, constant: -10),
-            textField.topAnchor.constraint(equalTo: containverView.topAnchor),
-            textField.bottomAnchor.constraint(equalTo: containverView.bottomAnchor),
+            textField.topAnchor.constraint(equalTo: containerView.topAnchor),
+            textField.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
             
-            clearButton.trailingAnchor.constraint(equalTo: containverView.trailingAnchor, constant: -10),
-            clearButton.topAnchor.constraint(equalTo: containverView.topAnchor, constant: 7),
-            clearButton.bottomAnchor.constraint(equalTo: containverView.bottomAnchor, constant: -7),
+            clearButton.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -10),
+            clearButton.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 7),
+            clearButton.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -7),
             clearButton.widthAnchor.constraint(equalToConstant: 18),
             clearButton.heightAnchor.constraint(equalToConstant: 18)
         ])
