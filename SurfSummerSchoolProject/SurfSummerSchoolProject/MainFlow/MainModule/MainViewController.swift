@@ -30,7 +30,7 @@ final class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureApperance()
-        model.getPosts()
+        model.loadPosts()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,7 +61,9 @@ private extension MainViewController {
     
     func configureModel() {
         model.didItemsUpdated = { [weak self] in
-            self?.collectionView.reloadData()
+            DispatchQueue.main.async {
+                self?.collectionView.reloadData()
+            }
         }
     }
     
@@ -79,15 +81,14 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(MainItemCollectionViewCell.self)", for: indexPath)
-        if let cell = cell as? MainItemCollectionViewCell {
-            let item = model.items[indexPath.row]
-            cell.title = item.title
-            cell.isFavorite = item.isFaforite
-            cell.image = model.items[indexPath.row].image
-            cell.didFavoritesTapped = { [weak self] in
-                self?.model.items[indexPath.row].isFaforite.toggle()
-            }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(MainItemCollectionViewCell.self)", for: indexPath) as? MainItemCollectionViewCell else { return UICollectionViewCell() }
+        
+        let item = model.items[indexPath.row]
+        cell.title = item.title
+        cell.isFavorite = item.isFavorite
+        cell.imageUrlInString = item.imageUrlInString
+        cell.didFavoritesTapped = { [weak self] in
+            self?.model.items[indexPath.row].isFavorite.toggle()
         }
         return cell
     }

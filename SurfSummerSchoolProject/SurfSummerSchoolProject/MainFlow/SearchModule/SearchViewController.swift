@@ -10,6 +10,7 @@ import UIKit
 final class SearchViewController: UIViewController {
 
 //    MARK: - Properties
+    
     private var searchView = SearchView()
     
 //    MARK: - UIViewController
