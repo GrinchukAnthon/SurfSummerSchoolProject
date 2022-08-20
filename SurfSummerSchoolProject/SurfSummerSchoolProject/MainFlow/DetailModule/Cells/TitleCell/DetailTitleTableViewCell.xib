@@ -23,7 +23,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCj-Bw-l5B">
-                        <rect key="frame" x="253" y="113.5" width="42" height="21"/>
+                        <rect key="frame" x="242" y="113.5" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -31,7 +31,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="PCj-Bw-l5B" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="W4e-nm-fmr" secondAttribute="trailing" constant="8" id="KHe-5r-HN4"/>
-                    <constraint firstAttribute="trailing" secondItem="PCj-Bw-l5B" secondAttribute="trailing" constant="16" id="Kdb-JN-6sq"/>
+                    <constraint firstAttribute="trailing" secondItem="PCj-Bw-l5B" secondAttribute="trailing" constant="27" id="Kdb-JN-6sq"/>
                     <constraint firstItem="W4e-nm-fmr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="PnI-AZ-FFl"/>
                     <constraint firstItem="W4e-nm-fmr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Vgf-Du-FgZ"/>
                     <constraint firstItem="W4e-nm-fmr" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="eFm-aR-XfJ"/>
@@ -41,8 +41,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="cartTitleLabel" destination="W4e-nm-fmr" id="8jQ-bQ-0gp"/>
-                <outlet property="dateLable" destination="PCj-Bw-l5B" id="SzH-sH-TIN"/>
+                <outlet property="detailDateLable" destination="PCj-Bw-l5B" id="SzH-sH-TIN"/>
+                <outlet property="detailTitleLabel" destination="W4e-nm-fmr" id="8jQ-bQ-0gp"/>
             </connections>
             <point key="canvasLocation" x="125.36231884057972" y="33.482142857142854"/>
         </tableViewCell>

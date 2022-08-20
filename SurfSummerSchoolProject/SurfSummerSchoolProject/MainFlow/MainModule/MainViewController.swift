@@ -9,14 +9,6 @@ import UIKit
 
 final class MainViewController: UIViewController {
     
-//    MARK: - Constants
-    
-    private enum Constants {
-        static let horisontalInset: CGFloat = 16
-        static let spaceBetweenElements: CGFloat = 7
-        static let spaceBetweenRows: CGFloat = 16
-    }
-    
 //    MARK: - Private Properties
     
     private let model: MainModel = .init()
@@ -50,10 +42,7 @@ private extension MainViewController {
     }
     
     func configureCollectionView() {
-        collectionView.register(
-            UINib(nibName: "\(MainItemCollectionViewCell.self)", bundle: .main),
-            forCellWithReuseIdentifier: "\(MainItemCollectionViewCell.self)"
-        )
+        collectionView.customRegister(MainItemCollectionViewCell.self)
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.contentInset = .init(top: 10, left: 16, bottom: 10, right: 16)
@@ -81,7 +70,10 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(MainItemCollectionViewCell.self)", for: indexPath) as? MainItemCollectionViewCell else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: "\(MainItemCollectionViewCell.self)",
+            for: indexPath
+        ) as? MainItemCollectionViewCell else { return UICollectionViewCell() }
         
         let item = model.items[indexPath.row]
         cell.title = item.title
@@ -94,16 +86,16 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let itemWidth = (view.frame.width - Constants.horisontalInset * 2 - Constants.spaceBetweenElements) / 2
-        return CGSize(width: itemWidth, height: 1.46 * itemWidth)
+        let itemWidth = (view.frame.width - Constants.horisontalInsetForMainVC * 2 - Constants.spaceBetweenElementsForMainVC) / 2
+        return CGSize(width: itemWidth, height: Constants.heightToWidthRatioForMainVC * itemWidth)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return Constants.spaceBetweenRows
+        return Constants.spaceBetweenRowsForMainVC
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return Constants.spaceBetweenElements
+        return Constants.spaceBetweenElementsForMainVC
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

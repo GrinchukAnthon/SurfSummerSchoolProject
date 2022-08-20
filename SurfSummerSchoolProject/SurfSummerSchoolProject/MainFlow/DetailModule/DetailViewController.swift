@@ -21,7 +21,6 @@ final class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureNavigationBar()
         configureAppearance()
         detailTableView.reloadData()
     }
@@ -38,13 +37,14 @@ private extension DetailViewController {
     
     func configureAppearance() {
         configureDetailTableView()
+        configureNavigationBar()
     }
     
     func configureDetailTableView() {
         detailTableView.separatorStyle = .none
-        detailTableView.register(UINib(nibName: "\(DetailImageTableViewCell.self)", bundle: .main), forCellReuseIdentifier: "\(DetailImageTableViewCell.self)")
-        detailTableView.register(UINib(nibName: "\(DetailTitleTableViewCell.self)", bundle: .main), forCellReuseIdentifier: "\(DetailTitleTableViewCell.self)")
-        detailTableView.register(UINib(nibName: "\(DetailTextTableViewCell.self)", bundle: .main), forCellReuseIdentifier: "\(DetailTextTableViewCell.self)")
+        detailTableView.customRegister(DetailImageTableViewCell.self)
+        detailTableView.customRegister(DetailTitleTableViewCell.self)
+        detailTableView.customRegister(DetailTextTableViewCell.self)
         detailTableView.dataSource = self
     }
     

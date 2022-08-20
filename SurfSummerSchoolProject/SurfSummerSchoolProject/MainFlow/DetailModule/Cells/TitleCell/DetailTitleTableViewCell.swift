@@ -11,20 +11,20 @@ final class DetailTitleTableViewCell: UITableViewCell {
 
 //    MARK: - View
     
-    @IBOutlet private weak var cartTitleLabel: UILabel!
-    @IBOutlet private weak var dateLable: UILabel!
+    @IBOutlet private weak var detailTitleLabel: UILabel!
+    @IBOutlet private weak var detailDateLable: UILabel!
     
 //    MARK: - Properties
     
     var title: String? {
         didSet {
-            cartTitleLabel.text = title
+            detailTitleLabel.text = title
         }
     }
     
     var date: String? {
         didSet {
-            dateLable.text = date
+            detailDateLable.text = date
         }
     }
     
@@ -43,8 +43,8 @@ private extension DetailTitleTableViewCell {
     
     func configureAppearence() {
         selectionStyle = .none
-        cartTitleLabel.font = .systemFont(ofSize: 16)
-        dateLable.font = .systemFont(ofSize: 10)
-        dateLable.textColor = .surfGrey
+        detailTitleLabel.font = .systemFont(ofSize: 16)
+        detailDateLable.font = .systemFont(ofSize: 10)
+        detailDateLable.textColor = .surfGrey
     }
 }
