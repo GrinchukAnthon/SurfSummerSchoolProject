@@ -32,7 +32,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="cartImageView" destination="8Ae-Ra-ann" id="Aot-Zn-AQh"/>
+                <outlet property="detailImageView" destination="8Ae-Ra-ann" id="Aot-Zn-AQh"/>
             </connections>
             <point key="canvasLocation" x="144.92753623188406" y="182.14285714285714"/>
         </tableViewCell>

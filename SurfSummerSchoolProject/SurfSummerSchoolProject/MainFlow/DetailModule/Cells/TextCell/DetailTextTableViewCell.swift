@@ -2,7 +2,7 @@
 //  DetailTextTableViewCell.swift
 //  SurfSummerSchoolProject
 //
-//  Created by Антон Гринчук on 07.08.2022.
+//  Created by Антон Гринчук on 19.08.2022.
 //
 
 import UIKit
@@ -11,13 +11,13 @@ final class DetailTextTableViewCell: UITableViewCell {
 
 //    MARK: - View
     
-    @IBOutlet private weak var contentLabel: UILabel!
+    @IBOutlet weak var detailContentLabel: UILabel!
     
 //    MARK: - Properties
     
     var text: String? {
         didSet {
-            contentLabel.text = text
+            detailContentLabel.text = text
         }
     }
     
@@ -35,8 +35,8 @@ private extension DetailTextTableViewCell {
     
     func configureAppearence() {
         selectionStyle = .none
-        contentLabel.font = .systemFont(ofSize: 12, weight: .light)
-        contentLabel.textColor = .surfBlack
-        contentLabel.numberOfLines = 0
+        detailContentLabel.font = .systemFont(ofSize: 12, weight: .light)
+        detailContentLabel.textColor = .surfBlack
+        detailContentLabel.numberOfLines = 0
     }
 }

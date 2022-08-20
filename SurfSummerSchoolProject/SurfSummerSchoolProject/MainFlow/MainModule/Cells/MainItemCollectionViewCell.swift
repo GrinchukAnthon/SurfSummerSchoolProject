@@ -7,14 +7,7 @@
 
 import UIKit
 
-class MainItemCollectionViewCell: UICollectionViewCell {
-    
-//    MARK: - Constants
-    
-    private enum Constants {
-        static let fillHeartImage = UIImage(assetIdentifier: .heartFill)
-        static let heartImage = UIImage(assetIdentifier: .heart)
-    }
+final class MainItemCollectionViewCell: UICollectionViewCell {
     
 //    MARK: - Views
     
