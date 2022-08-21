@@ -19,9 +19,30 @@ final class ProfileModel {
     }
     
     func getPost() {
-        items = Array(repeating: ProfileItemModel.createDefault(), count: 100)
+        if let data = UserDefaults.standard.value(forKey:"userData") as? Data {
+            let userData = try? PropertyListDecoder().decode(AuthResponseModel.self, from: data)
+            for _ in 0..<4 {
+                guard let item = userData?.userInfo else { return }
+                guard let avatar = URL(string: item.avatar ?? "") else { return }
+                ImageLoader().loadImage(from: avatar) { result in
+                    switch result {
+                    case .success(let response):
+                        DispatchQueue.main.async {
+                            self.items.append(ProfileItemModel(phone: item.phone ?? "",
+                                                               email: item.email ?? "",
+                                                               firstName: item.firstName ?? "",
+                                                               lastName: item.lastName ?? "",
+                                                               avatar:  response,
+                                                               city: item.city ?? "",
+                                                               about: item.about ?? ""))
+                        }
+                    case .failure(let error):
+                        print(error)
+                    }
+                }
+            }
+        }
     }
-    
 }
 
 struct ProfileItemModel {
@@ -35,21 +56,5 @@ struct ProfileItemModel {
     let avatar: UIImage?
     let city: String
     let about: String
-
-    // MARK: - Initialization
-
-//    internal init(phone: String, email: String, firstName: String, lastName: String, avatar: String, city: String, about: String) {
-//        self.phone = phone
-//        self.email = email
-//        self.firstName = firstName
-//        self.lastName = lastName
-//        self.avatar = avatar
-//        self.city = city
-//        self.about = about
-//    }
-    
-    static func createDefault() -> ProfileItemModel {
-        .init(phone: "+7969-123-92-27", email: "realgrinch@yandex.ru", firstName: "Anton", lastName: "Grinchuk", avatar: UIImage(assetIdentifier: .defaultImage), city: "Moscow", about: "Swift Developer")
-    }
 }
 

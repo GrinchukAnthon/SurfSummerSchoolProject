@@ -11,6 +11,8 @@ final class AuthorizationLoginTableViewCell: UITableViewCell {
     
 //    MARK: - Views
     
+    var loginTextUpdated: ((_ text: String?) -> Void)?
+    
     @IBOutlet private weak var authorizationConteinerView: UIView!
     @IBOutlet private weak var authorizationLoginLabel: UILabel!
     @IBOutlet private weak var authorizationLoginTextField: UITextField!
@@ -45,6 +47,7 @@ private extension AuthorizationLoginTableViewCell {
         authorizationLoginLabel.textColor = .surfLidhtGreyForLabelAutorizationScreen
         authorizationLoginLabel.isHidden = true
     }
+    
     func configurAauthorizationLoginTextField() {
         authorizationLoginTextField.font = .systemFont(ofSize: 16, weight: .regular)
         authorizationLoginTextField.borderStyle = .none
@@ -57,11 +60,13 @@ private extension AuthorizationLoginTableViewCell {
         )
         authorizationLoginTextField.delegate = self
     }
+    
     @objc func authorizationLoginTextFieldDidAnimation() {
         guard !(authorizationLoginTextField.text?.isEmpty ?? true) else { return }
         
         authorizationLoginLabel.isHidden = authorizationLoginTextField.text?.isEmpty ?? false
         authorizationLoginTextField.placeholder = ""
+        loginTextUpdated?(authorizationLoginTextField.text)
         
         UIView.animate(withDuration: 0) {
             self.topTextFieldConstraint.constant = 48

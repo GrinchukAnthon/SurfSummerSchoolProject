@@ -7,16 +7,25 @@
 
 import Foundation
 
-struct AuthResponseModel: Decodable {
+struct AuthResponseModel: Codable {
     
     let token: String
-//    let userInfo: UserInfo
+    let userInfo: UserInfo
+    
+    enum CodingKeys: String, CodingKey {
+        case token
+        case userInfo = "user_info"
+    }
 }
 
-//struct UserInfo: Decodable {
-//    
-//    let id, phone, email, firstName: String
-//    let lastName: String
-//    let avatar: String
-//    let city, about: String
-//}
+struct UserInfo: Codable {
+    
+    let id: String?
+    let phone: String?
+    let email: String?
+    let firstName: String?
+    let lastName: String?
+    let avatar: String?
+    let city: String?
+    let about: String?
+}

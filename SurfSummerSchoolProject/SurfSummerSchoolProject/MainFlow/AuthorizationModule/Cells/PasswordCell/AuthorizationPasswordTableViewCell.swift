@@ -15,20 +15,17 @@ final class AuthorizationPasswordTableViewCell: UITableViewCell {
     @IBOutlet private weak var authorizationPasswordLabel: UILabel!
     @IBOutlet private weak var authorizationPasswordTextField: UITextField!
     @IBOutlet private weak var topTextFieldConstraint: NSLayoutConstraint!
-    @IBOutlet private weak var showPasswordButtonOutlet: UIButton!
+    
+    var passwordTextUpdated: ((_ text: String?) -> Void)?
+
+    var iconClick = false
+    let imageIcon = UIImageView()
     
 //    MARK: - UITableViewCell
     
     override func awakeFromNib() {
         super.awakeFromNib()
         configureApperence()
-    }
-    
-//    MARK: - Actions
-    
-    @IBAction func showPasswordButtonAction(_ sender: Any) {
-        authorizationPasswordTextField.isSecureTextEntry = false
-        showPasswordButtonOutlet.setImage(UIImage(assetIdentifier: .openEye), for: .normal)
     }
 }
 
@@ -41,7 +38,6 @@ private extension AuthorizationPasswordTableViewCell {
         configureAuthorizationConteinerView()
         configureAuthorizationPasswordLabel()
         configurAauthorizationPasswordTextField()
-        configureShowPasswordButtonOutlet()
     }
     func configureAuthorizationConteinerView() {
         authorizationConteinerView.backgroundColor = .surfWhiteForConteinerViewAutorizationScreen
@@ -64,10 +60,9 @@ private extension AuthorizationPasswordTableViewCell {
             action: #selector(authorizationLoginTextFieldDidAnimation),
             for: .allEditingEvents
         )
-        
-        
-        var iconClick = false
-        let imageIcon = UIImageView()
+        configureShowPasswordButton()
+    }
+    func configureShowPasswordButton() {
         imageIcon.image = UIImage(assetIdentifier: .closedEye)
         let contentView = UIView()
         contentView.addSubview(imageIcon)
@@ -78,21 +73,13 @@ private extension AuthorizationPasswordTableViewCell {
         let tapGest = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tap:)))
         imageIcon.isUserInteractionEnabled = true
         imageIcon.addGestureRecognizer(tapGest)
-        
-        
-        
-    }
-    func configureShowPasswordButtonOutlet() {
-        showPasswordButtonOutlet.setImage(UIImage(assetIdentifier: .closedEye), for: .normal)
-        showPasswordButtonOutlet.tintColor = .surfLidhtGreyForLabelAutorizationScreen
-        showPasswordButtonOutlet.contentMode = .scaleAspectFit
-
     }
     @objc func authorizationLoginTextFieldDidAnimation() {
         guard !(authorizationPasswordTextField.text?.isEmpty ?? true) else { return }
         
         authorizationPasswordLabel.isHidden = authorizationPasswordTextField.text?.isEmpty ?? false
         authorizationPasswordTextField.placeholder = ""
+        passwordTextUpdated?(authorizationPasswordTextField.text)
         
         UIView.animate(withDuration: 0) {
             self.topTextFieldConstraint.constant = 48
@@ -100,7 +87,18 @@ private extension AuthorizationPasswordTableViewCell {
         }
     }
     @objc func imageTapped(tap: UITapGestureRecognizer) {
-//        let tappedImage =
+        let tappedImage = tap.view as! UIImageView
+        
+        if iconClick {
+            iconClick = false
+            tappedImage.image = UIImage(assetIdentifier: .openEye)
+            authorizationPasswordTextField.isSecureTextEntry = false
+        } else {
+            iconClick = true
+            tappedImage.image = UIImage(assetIdentifier: .closedEye)
+            authorizationPasswordTextField.isSecureTextEntry = true
+        }
+        
     }
     func setupCorners(_ view: UIView) {
         let corners = UIRectCorner(

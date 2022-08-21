@@ -11,8 +11,8 @@ final class ProfileViewController: UIViewController {
     
 //    MARK: - Views
     
-    @IBOutlet weak var profileTableView: UITableView!
-    @IBOutlet weak var profileButtonOutlet: UIButton!
+    @IBOutlet private weak var profileTableView: UITableView!
+    @IBOutlet private weak var profileButtonOutlet: UIButton!
     
 //    MARK: - Properties
     
@@ -33,7 +33,9 @@ final class ProfileViewController: UIViewController {
     
 //    MARK: - Actions
     @IBAction func profileButtonAction(_ sender: Any) {
-        navigationController?.pushViewController(AuthorizationViewController(), animated: true)
+        UserDefaults.standard.removeObject(forKey: "userData")
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        appDelegate.runMainFlow()
     }
 }
 
@@ -69,10 +71,11 @@ private extension ProfileViewController {
 extension ProfileViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return model.items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard !model.items.isEmpty else { return UITableViewCell () }
         let item = model.items[indexPath.row]
         switch indexPath.row {
         case 0:

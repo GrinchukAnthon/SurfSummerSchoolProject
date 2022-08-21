@@ -15,6 +15,10 @@ final class AuthorizationViewController: UIViewController {
     @IBOutlet private weak var authorizationTableView: UITableView!
     @IBOutlet private weak var authorizationButtonOutlet: UIButton!
     
+    private let authService = AuthService()
+    private var login: String? = ""
+    private var password: String? = ""
+    
 //    MARK: - UIViewController
     
     override func viewDidLoad() {
@@ -23,10 +27,29 @@ final class AuthorizationViewController: UIViewController {
         configureApperence()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guard let data = UserDefaults.standard.value(forKey:"userData") as? Data else { return }
+        guard let _ = try? PropertyListDecoder().decode(AuthResponseModel.self, from: data) else { return }
+        navigationController?.pushViewController(TabBarConfigurator().configure(), animated: true)
+    }
+    
 //    MARK: - Actions
     
     @IBAction private func authorizationButtonActions(_ sender: Any) {
-        navigationController?.pushViewController(TabBarConfigurator().configure(), animated: true)
+        guard let login = login, let password = password else { return }
+        let model = AuthRequestModel(phone: login, password: password)
+        authService.performLoginRequestAndSaveToken(model) { [weak self] result in
+            switch result {
+            case .success(let response):
+                UserDefaults.standard.set(try? PropertyListEncoder().encode(response), forKey:"userData")
+                DispatchQueue.main.async {
+                    self?.navigationController?.pushViewController(TabBarConfigurator().configure(), animated: true)
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
 
@@ -78,12 +101,18 @@ extension AuthorizationViewController: UITableViewDataSource {
                 withIdentifier: "\(AuthorizationLoginTableViewCell.self)",
                 for: indexPath
             ) as? AuthorizationLoginTableViewCell else { return UITableViewCell() }
+            cell.loginTextUpdated = { [weak self] text in
+                self?.login = text
+            }
             return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: "\(AuthorizationPasswordTableViewCell.self)",
                 for: indexPath
             ) as? AuthorizationPasswordTableViewCell else { return UITableViewCell() }
+            cell.passwordTextUpdated = { [weak self] text in
+                self?.password = text
+            }
             return cell
         default:
             return UITableViewCell()

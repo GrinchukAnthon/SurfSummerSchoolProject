@@ -80,6 +80,7 @@ private extension SearchCollectionViewCell {
         titleLabel.font = .systemFont(ofSize: 12)
         
         imageView.layer.cornerRadius = 12
+        imageView.contentMode = .scaleAspectFit
         
         favoriteButton.tintColor = .surfWhite
     }
