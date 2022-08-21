@@ -63,24 +63,27 @@ extension DetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
         case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "\(DetailImageTableViewCell.self)")
-            if let cell = cell as? DetailImageTableViewCell {
-                cell.imageUrlInString = model?.imageUrlInString ?? ""
-            }
-            return cell ?? UITableViewCell()
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: "\(DetailImageTableViewCell.self)",
+                for: indexPath
+            ) as? DetailImageTableViewCell else { return UITableViewCell() }
+            cell.imageUrlInString = model?.imageUrlInString ?? ""
+            return cell
         case 1:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "\(DetailTitleTableViewCell.self)")
-            if let cell = cell as? DetailTitleTableViewCell {
-                cell.title = model?.title ?? ""
-                cell.date = model?.dateCreation ?? ""
-            }
-            return cell ?? UITableViewCell()
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: "\(DetailTitleTableViewCell.self)",
+                for: indexPath
+            ) as? DetailTitleTableViewCell else { return UITableViewCell() }
+            cell.title = model?.title ?? ""
+            cell.date = model?.dateCreation ?? ""
+            return cell
         case 2:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "\(DetailTextTableViewCell.self)")
-            if let cell = cell as? DetailTextTableViewCell {
-                cell.text = model?.content
-            }
-            return cell ?? UITableViewCell()
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: "\(DetailTextTableViewCell.self)",
+                for: indexPath
+            ) as? DetailTextTableViewCell else { return UITableViewCell() }
+            cell.text = model?.content
+            return cell
         default:
             return UITableViewCell()
         }

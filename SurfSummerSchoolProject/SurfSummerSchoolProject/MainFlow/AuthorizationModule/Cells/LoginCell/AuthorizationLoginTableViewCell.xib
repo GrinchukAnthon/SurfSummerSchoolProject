@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="105" id="KGk-i7-Jjw" customClass="AuthorizationLoginTableViewCell" customModule="SurfSummerSchoolProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="495" height="105"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="495" height="105"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PDv-N6-Aln">
+                        <rect key="frame" x="16" y="16" width="463" height="74"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="PDv-N6-Aln" secondAttribute="height" multiplier="343:55" id="xiY-AT-d4d"/>
+                        </constraints>
+                    </view>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sIC-CU-elE">
+                        <rect key="frame" x="35" y="37" width="425" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOa-1q-YEg">
+                        <rect key="frame" x="35" y="27" width="42" height="10"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="PDv-N6-Aln" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="1dz-5g-xG3"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="sIC-CU-elE" secondAttribute="bottom" constant="7" id="7Jy-uw-iC7"/>
+                    <constraint firstItem="GOa-1q-YEg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="35" id="J4v-7j-hul"/>
+                    <constraint firstItem="sIC-CU-elE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="35" id="JB3-Da-48O"/>
+                    <constraint firstItem="sIC-CU-elE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="37" id="SFs-jZ-k25"/>
+                    <constraint firstItem="PDv-N6-Aln" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="TNX-47-YK6"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="PDv-N6-Aln" secondAttribute="bottom" id="VG2-cq-pSZ"/>
+                    <constraint firstAttribute="trailing" secondItem="PDv-N6-Aln" secondAttribute="trailing" constant="16" id="ady-X8-uyh"/>
+                    <constraint firstItem="GOa-1q-YEg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="27" id="cth-Fm-uwF"/>
+                    <constraint firstItem="sIC-CU-elE" firstAttribute="top" secondItem="GOa-1q-YEg" secondAttribute="bottom" id="gdp-aa-o3B"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GOa-1q-YEg" secondAttribute="trailing" constant="18" id="wru-DB-aS1"/>
+                    <constraint firstAttribute="trailing" secondItem="sIC-CU-elE" secondAttribute="trailing" constant="35" id="xXZ-c1-lwe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="authorizationConteinerView" destination="PDv-N6-Aln" id="0Sk-Yx-O4n"/>
+                <outlet property="authorizationLoginLabel" destination="GOa-1q-YEg" id="1C9-be-a8P"/>
+                <outlet property="authorizationLoginTextField" destination="sIC-CU-elE" id="Smm-k7-fNS"/>
+                <outlet property="topTextFieldConstraint" destination="SFs-jZ-k25" id="FVx-tG-kv5"/>
+            </connections>
+            <point key="canvasLocation" x="274.63768115942031" y="99.441964285714278"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

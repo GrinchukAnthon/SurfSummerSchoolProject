@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Constants {
+final class Constants {
     
     static let fillHeartImage = UIImage(assetIdentifier: .heartFill)
     static let heartImage = UIImage(assetIdentifier: .heart)
@@ -20,4 +20,6 @@ class Constants {
     static let spaceBetweenRowsForFavoriteVC: CGFloat = 0
     static let heightToWidthRatioForFavoriteVC: CGFloat = 1.13
     
+    static let maxNumberCount = 11
+    static let regex = try! NSRegularExpression(pattern: "[\\+\\s-\\(\\)]", options: .caseInsensitive)
 }

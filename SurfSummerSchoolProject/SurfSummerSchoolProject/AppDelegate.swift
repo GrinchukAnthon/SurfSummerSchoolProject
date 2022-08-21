@@ -41,7 +41,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     func runMainFlow() {
         DispatchQueue.main.async {
-            self.window?.rootViewController = TabBarConfigurator().configure()
+            let navi = UINavigationController(rootViewController: AuthorizationViewController())
+            self.window?.rootViewController = navi //TabBarConfigurator().configure()
         }
     }
     func runLaunchScreen() {

@@ -20,6 +20,8 @@ extension UIImage {
         case searchTextField = "search-textField"
         case surfSplash = "surfSplash"
         case defaultImage = "default-image"
+        case openEye = "openEye"
+        case closedEye = "closedEye"
     }
     
     convenience init(assetIdentifier: AssetIdentifier) {

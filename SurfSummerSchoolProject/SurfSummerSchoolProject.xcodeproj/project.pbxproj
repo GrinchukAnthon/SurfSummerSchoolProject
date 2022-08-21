@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C910508628B138D0007CD8AB /* ProfileCityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C910508428B138D0007CD8AB /* ProfileCityTableViewCell.swift */; };
+		C910508728B138D0007CD8AB /* ProfileCityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C910508528B138D0007CD8AB /* ProfileCityTableViewCell.xib */; };
+		C910508B28B13C2A007CD8AB /* ProfilePhoneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C910508928B13C2A007CD8AB /* ProfilePhoneTableViewCell.swift */; };
+		C910508C28B13C2A007CD8AB /* ProfilePhoneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C910508A28B13C2A007CD8AB /* ProfilePhoneTableViewCell.xib */; };
+		C910509028B13E7C007CD8AB /* ProfileEmailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C910508E28B13E7C007CD8AB /* ProfileEmailTableViewCell.swift */; };
+		C910509128B13E7C007CD8AB /* ProfileEmailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C910508F28B13E7C007CD8AB /* ProfileEmailTableViewCell.xib */; };
+		C910509828B14BAC007CD8AB /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C910509728B14BAC007CD8AB /* ProfileModel.swift */; };
+		C910509C28B210AE007CD8AB /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C910509A28B210AE007CD8AB /* AuthorizationViewController.swift */; };
+		C910509D28B210AE007CD8AB /* AuthorizationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C910509B28B210AE007CD8AB /* AuthorizationViewController.xib */; };
+		C91050A128B21147007CD8AB /* AuthorizationLoginTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C910509F28B21147007CD8AB /* AuthorizationLoginTableViewCell.swift */; };
+		C91050A228B21147007CD8AB /* AuthorizationLoginTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C91050A028B21147007CD8AB /* AuthorizationLoginTableViewCell.xib */; };
+		C91050A528B2119C007CD8AB /* AuthorizationPasswordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91050A328B2119C007CD8AB /* AuthorizationPasswordTableViewCell.swift */; };
+		C91050A628B2119C007CD8AB /* AuthorizationPasswordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C91050A428B2119C007CD8AB /* AuthorizationPasswordTableViewCell.xib */; };
 		C957DDCD28A0E3B3004AB4B7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C957DDCB28A0E3B3004AB4B7 /* SearchViewController.swift */; };
 		C957DDCE28A0E3B3004AB4B7 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C957DDCC28A0E3B3004AB4B7 /* SearchViewController.xib */; };
 		C980D8E5289ABE7F000C2727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C980D8E4289ABE7F000C2727 /* AppDelegate.swift */; };
@@ -30,6 +43,9 @@
 		C980D923289FB7E3000C2727 /* DetailTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C980D921289FB7E3000C2727 /* DetailTitleTableViewCell.swift */; };
 		C980D924289FB7E3000C2727 /* DetailTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C980D922289FB7E3000C2727 /* DetailTitleTableViewCell.xib */; };
 		C980D92B289FCC7F000C2727 /* DetailItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C980D92A289FCC7F000C2727 /* DetailItemModel.swift */; };
+		C98EE6B128B287F300341B65 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EE6AF28B287F300341B65 /* SearchCollectionViewCell.swift */; };
+		C98EE6B228B287F300341B65 /* SearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C98EE6B028B287F300341B65 /* SearchCollectionViewCell.xib */; };
+		C98EE6B428B297CD00341B65 /* PhoneNamberMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EE6B328B297CD00341B65 /* PhoneNamberMask.swift */; };
 		C9BAD58A28AB88010083CA8E /* Extension UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BAD58928AB88010083CA8E /* Extension UIColor.swift */; };
 		C9BAD58C28ABAE050083CA8E /* CreateButtonsInNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BAD58B28ABAE050083CA8E /* CreateButtonsInNavBar.swift */; };
 		C9BAD58E28ABBD3D0083CA8E /* Extension UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BAD58D28ABBD3D0083CA8E /* Extension UIImage.swift */; };
@@ -54,9 +70,24 @@
 		C9DF201628B0DD110008D4BA /* FavoriteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9DF201428B0DD110008D4BA /* FavoriteCollectionViewCell.xib */; };
 		C9DF201828B0F1A10008D4BA /* customRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF201728B0F1A10008D4BA /* customRegister.swift */; };
 		C9DF201A28B0FB490008D4BA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF201928B0FB490008D4BA /* Constants.swift */; };
+		C9DF201E28B118180008D4BA /* ProfileImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF201C28B118180008D4BA /* ProfileImageTableViewCell.swift */; };
+		C9DF201F28B118180008D4BA /* ProfileImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9DF201D28B118180008D4BA /* ProfileImageTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C910508428B138D0007CD8AB /* ProfileCityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCityTableViewCell.swift; sourceTree = "<group>"; };
+		C910508528B138D0007CD8AB /* ProfileCityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCityTableViewCell.xib; sourceTree = "<group>"; };
+		C910508928B13C2A007CD8AB /* ProfilePhoneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhoneTableViewCell.swift; sourceTree = "<group>"; };
+		C910508A28B13C2A007CD8AB /* ProfilePhoneTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfilePhoneTableViewCell.xib; sourceTree = "<group>"; };
+		C910508E28B13E7C007CD8AB /* ProfileEmailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEmailTableViewCell.swift; sourceTree = "<group>"; };
+		C910508F28B13E7C007CD8AB /* ProfileEmailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileEmailTableViewCell.xib; sourceTree = "<group>"; };
+		C910509728B14BAC007CD8AB /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		C910509A28B210AE007CD8AB /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		C910509B28B210AE007CD8AB /* AuthorizationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorizationViewController.xib; sourceTree = "<group>"; };
+		C910509F28B21147007CD8AB /* AuthorizationLoginTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationLoginTableViewCell.swift; sourceTree = "<group>"; };
+		C91050A028B21147007CD8AB /* AuthorizationLoginTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorizationLoginTableViewCell.xib; sourceTree = "<group>"; };
+		C91050A328B2119C007CD8AB /* AuthorizationPasswordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationPasswordTableViewCell.swift; sourceTree = "<group>"; };
+		C91050A428B2119C007CD8AB /* AuthorizationPasswordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorizationPasswordTableViewCell.xib; sourceTree = "<group>"; };
 		C957DDCB28A0E3B3004AB4B7 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		C957DDCC28A0E3B3004AB4B7 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		C980D8E1289ABE7F000C2727 /* SurfSummerSchoolProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurfSummerSchoolProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +113,9 @@
 		C980D921289FB7E3000C2727 /* DetailTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTitleTableViewCell.swift; sourceTree = "<group>"; };
 		C980D922289FB7E3000C2727 /* DetailTitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTitleTableViewCell.xib; sourceTree = "<group>"; };
 		C980D92A289FCC7F000C2727 /* DetailItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailItemModel.swift; sourceTree = "<group>"; };
+		C98EE6AF28B287F300341B65 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		C98EE6B028B287F300341B65 /* SearchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCollectionViewCell.xib; sourceTree = "<group>"; };
+		C98EE6B328B297CD00341B65 /* PhoneNamberMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNamberMask.swift; sourceTree = "<group>"; };
 		C9BAD58928AB88010083CA8E /* Extension UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension UIColor.swift"; sourceTree = "<group>"; };
 		C9BAD58B28ABAE050083CA8E /* CreateButtonsInNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateButtonsInNavBar.swift; sourceTree = "<group>"; };
 		C9BAD58D28ABBD3D0083CA8E /* Extension UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension UIImage.swift"; sourceTree = "<group>"; };
@@ -106,6 +140,8 @@
 		C9DF201428B0DD110008D4BA /* FavoriteCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteCollectionViewCell.xib; sourceTree = "<group>"; };
 		C9DF201728B0F1A10008D4BA /* customRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customRegister.swift; sourceTree = "<group>"; };
 		C9DF201928B0FB490008D4BA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C9DF201C28B118180008D4BA /* ProfileImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageTableViewCell.swift; sourceTree = "<group>"; };
+		C9DF201D28B118180008D4BA /* ProfileImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileImageTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,9 +155,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C910508328B13881007CD8AB /* CityCell */ = {
+			isa = PBXGroup;
+			children = (
+				C910508428B138D0007CD8AB /* ProfileCityTableViewCell.swift */,
+				C910508528B138D0007CD8AB /* ProfileCityTableViewCell.xib */,
+			);
+			path = CityCell;
+			sourceTree = "<group>";
+		};
+		C910508828B13C05007CD8AB /* PhoneCell */ = {
+			isa = PBXGroup;
+			children = (
+				C910508928B13C2A007CD8AB /* ProfilePhoneTableViewCell.swift */,
+				C910508A28B13C2A007CD8AB /* ProfilePhoneTableViewCell.xib */,
+			);
+			path = PhoneCell;
+			sourceTree = "<group>";
+		};
+		C910508D28B13E45007CD8AB /* EmailCell */ = {
+			isa = PBXGroup;
+			children = (
+				C910508E28B13E7C007CD8AB /* ProfileEmailTableViewCell.swift */,
+				C910508F28B13E7C007CD8AB /* ProfileEmailTableViewCell.xib */,
+			);
+			path = EmailCell;
+			sourceTree = "<group>";
+		};
+		C910509928B20FFF007CD8AB /* AuthorizationModule */ = {
+			isa = PBXGroup;
+			children = (
+				C910509E28B210FB007CD8AB /* Cells */,
+				C910509A28B210AE007CD8AB /* AuthorizationViewController.swift */,
+				C910509B28B210AE007CD8AB /* AuthorizationViewController.xib */,
+			);
+			path = AuthorizationModule;
+			sourceTree = "<group>";
+		};
+		C910509E28B210FB007CD8AB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C91050A728B211A2007CD8AB /* LoginCell */,
+				C91050A828B211BE007CD8AB /* PasswordCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C91050A728B211A2007CD8AB /* LoginCell */ = {
+			isa = PBXGroup;
+			children = (
+				C910509F28B21147007CD8AB /* AuthorizationLoginTableViewCell.swift */,
+				C91050A028B21147007CD8AB /* AuthorizationLoginTableViewCell.xib */,
+			);
+			path = LoginCell;
+			sourceTree = "<group>";
+		};
+		C91050A828B211BE007CD8AB /* PasswordCell */ = {
+			isa = PBXGroup;
+			children = (
+				C91050A328B2119C007CD8AB /* AuthorizationPasswordTableViewCell.swift */,
+				C91050A428B2119C007CD8AB /* AuthorizationPasswordTableViewCell.xib */,
+			);
+			path = PasswordCell;
+			sourceTree = "<group>";
+		};
 		C957DDCA28A0E122004AB4B7 /* SearchModule */ = {
 			isa = PBXGroup;
 			children = (
+				C98EE6AE28B287D200341B65 /* Cell */,
 				C957DDCB28A0E3B3004AB4B7 /* SearchViewController.swift */,
 				C957DDCC28A0E3B3004AB4B7 /* SearchViewController.xib */,
 				C9BAD58F28ACE1E20083CA8E /* SearchView.swift */,
@@ -161,6 +262,7 @@
 		C980D900289AE00B000C2727 /* MainFlow */ = {
 			isa = PBXGroup;
 			children = (
+				C910509928B20FFF007CD8AB /* AuthorizationModule */,
 				C957DDCA28A0E122004AB4B7 /* SearchModule */,
 				C980D915289FA9E8000C2727 /* DetailModule */,
 				C980D901289AE01D000C2727 /* MainModule */,
@@ -173,7 +275,7 @@
 		C980D901289AE01D000C2727 /* MainModule */ = {
 			isa = PBXGroup;
 			children = (
-				C980D910289C0390000C2727 /* Cells */,
+				C980D910289C0390000C2727 /* Cell */,
 				C980D8F8289ADEEB000C2727 /* MainViewController.swift */,
 				C980D8F9289ADEEB000C2727 /* MainViewController.xib */,
 				C980D90E289BFD54000C2727 /* MainModel.swift */,
@@ -184,8 +286,10 @@
 		C980D902289AE044000C2727 /* ProfileModule */ = {
 			isa = PBXGroup;
 			children = (
+				C9DF201B28B117760008D4BA /* Cells */,
 				C980D8FC289ADF82000C2727 /* ProfileViewController.swift */,
 				C980D8FD289ADF82000C2727 /* ProfileViewController.xib */,
+				C910509728B14BAC007CD8AB /* ProfileModel.swift */,
 			);
 			path = ProfileModule;
 			sourceTree = "<group>";
@@ -219,13 +323,13 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
-		C980D910289C0390000C2727 /* Cells */ = {
+		C980D910289C0390000C2727 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				C980D911289C03C3000C2727 /* MainItemCollectionViewCell.swift */,
 				C980D912289C03C3000C2727 /* MainItemCollectionViewCell.xib */,
 			);
-			path = Cells;
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		C980D915289FA9E8000C2727 /* DetailModule */ = {
@@ -276,6 +380,15 @@
 			path = TextCell;
 			sourceTree = "<group>";
 		};
+		C98EE6AE28B287D200341B65 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C98EE6AF28B287F300341B65 /* SearchCollectionViewCell.swift */,
+				C98EE6B028B287F300341B65 /* SearchCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		C9BAD59128AD11D60083CA8E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +397,7 @@
 				C9BAD58D28ABBD3D0083CA8E /* Extension UIImage.swift */,
 				C9DF201728B0F1A10008D4BA /* customRegister.swift */,
 				C9DF201928B0FB490008D4BA /* Constants.swift */,
+				C98EE6B328B297CD00341B65 /* PhoneNamberMask.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -366,6 +480,26 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		C9DF201B28B117760008D4BA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C910508D28B13E45007CD8AB /* EmailCell */,
+				C910508828B13C05007CD8AB /* PhoneCell */,
+				C910508328B13881007CD8AB /* CityCell */,
+				C9DF202028B118210008D4BA /* ImageCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C9DF202028B118210008D4BA /* ImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				C9DF201C28B118180008D4BA /* ProfileImageTableViewCell.swift */,
+				C9DF201D28B118180008D4BA /* ProfileImageTableViewCell.xib */,
+			);
+			path = ImageCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -426,15 +560,23 @@
 			files = (
 				C980D8F1289ABE80000C2727 /* LaunchScreen.storyboard in Resources */,
 				C980D8EE289ABE80000C2727 /* Assets.xcassets in Resources */,
+				C98EE6B228B287F300341B65 /* SearchCollectionViewCell.xib in Resources */,
 				C980D919289FAA20000C2727 /* DetailViewController.xib in Resources */,
 				C9BAD5C128AFDB090083CA8E /* DetailTextTableViewCell.xib in Resources */,
 				C980D914289C03C3000C2727 /* MainItemCollectionViewCell.xib in Resources */,
 				C980D907289AE0C9000C2727 /* FavoriteViewController.xib in Resources */,
+				C910508728B138D0007CD8AB /* ProfileCityTableViewCell.xib in Resources */,
 				C980D924289FB7E3000C2727 /* DetailTitleTableViewCell.xib in Resources */,
 				C957DDCE28A0E3B3004AB4B7 /* SearchViewController.xib in Resources */,
+				C910508C28B13C2A007CD8AB /* ProfilePhoneTableViewCell.xib in Resources */,
+				C91050A228B21147007CD8AB /* AuthorizationLoginTableViewCell.xib in Resources */,
+				C910509128B13E7C007CD8AB /* ProfileEmailTableViewCell.xib in Resources */,
 				C980D8FF289ADF82000C2727 /* ProfileViewController.xib in Resources */,
 				C980D91F289FB483000C2727 /* DetailImageTableViewCell.xib in Resources */,
+				C91050A628B2119C007CD8AB /* AuthorizationPasswordTableViewCell.xib in Resources */,
 				C9DF201628B0DD110008D4BA /* FavoriteCollectionViewCell.xib in Resources */,
+				C910509D28B210AE007CD8AB /* AuthorizationViewController.xib in Resources */,
+				C9DF201F28B118180008D4BA /* ProfileImageTableViewCell.xib in Resources */,
 				C980D8FB289ADEEB000C2727 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,11 +588,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C910509C28B210AE007CD8AB /* AuthorizationViewController.swift in Sources */,
 				C9BAD5C028AFDB090083CA8E /* DetailTextTableViewCell.swift in Sources */,
+				C98EE6B128B287F300341B65 /* SearchCollectionViewCell.swift in Sources */,
+				C910508628B138D0007CD8AB /* ProfileCityTableViewCell.swift in Sources */,
 				C9BAD59A28AE3DEF0083CA8E /* BaseNetworkTask.swift in Sources */,
 				C9BAD5A128AE5E0E0083CA8E /* AuthRequestModel.swift in Sources */,
 				C980D918289FAA20000C2727 /* DetailViewController.swift in Sources */,
+				C910509828B14BAC007CD8AB /* ProfileModel.swift in Sources */,
 				C9BAD5AD28AE703C0083CA8E /* TokenStorage.swift in Sources */,
+				C98EE6B428B297CD00341B65 /* PhoneNamberMask.swift in Sources */,
 				C980D8FA289ADEEB000C2727 /* MainViewController.swift in Sources */,
 				C980D8FE289ADF82000C2727 /* ProfileViewController.swift in Sources */,
 				C9BAD5AA28AE6F340083CA8E /* PicturesService.swift in Sources */,
@@ -462,10 +609,15 @@
 				C9BAD59628AE37360083CA8E /* NetworkTask.swift in Sources */,
 				C980D92B289FCC7F000C2727 /* DetailItemModel.swift in Sources */,
 				C9BAD5A328AE5F470083CA8E /* AuthResponseModel.swift in Sources */,
+				C910509028B13E7C007CD8AB /* ProfileEmailTableViewCell.swift in Sources */,
 				C980D90F289BFD54000C2727 /* MainModel.swift in Sources */,
+				C91050A528B2119C007CD8AB /* AuthorizationPasswordTableViewCell.swift in Sources */,
+				C9DF201E28B118180008D4BA /* ProfileImageTableViewCell.swift in Sources */,
 				C957DDCD28A0E3B3004AB4B7 /* SearchViewController.swift in Sources */,
 				C9DF201828B0F1A10008D4BA /* customRegister.swift in Sources */,
 				C980D913289C03C3000C2727 /* MainItemCollectionViewCell.swift in Sources */,
+				C91050A128B21147007CD8AB /* AuthorizationLoginTableViewCell.swift in Sources */,
+				C910508B28B13C2A007CD8AB /* ProfilePhoneTableViewCell.swift in Sources */,
 				C9DF201528B0DD110008D4BA /* FavoriteCollectionViewCell.swift in Sources */,
 				C9BAD5A828AE6D590083CA8E /* EmptyModel.swift in Sources */,
 				C9BAD5B128AE71520083CA8E /* BaseTokenStorage.swift in Sources */,

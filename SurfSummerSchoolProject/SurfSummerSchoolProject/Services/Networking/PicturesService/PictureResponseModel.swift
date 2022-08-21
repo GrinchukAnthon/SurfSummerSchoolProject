@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PictureResponseModel: Decodable {
+struct PictureResponseModel: Codable {
 
     // MARK: - Internal Properties
 
