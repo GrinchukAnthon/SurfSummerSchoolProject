@@ -10,4 +10,13 @@ import Foundation
 struct AuthResponseModel: Decodable {
     
     let token: String
+//    let userInfo: UserInfo
 }
+
+//struct UserInfo: Decodable {
+//    
+//    let id, phone, email, firstName: String
+//    let lastName: String
+//    let avatar: String
+//    let city, about: String
+//}

@@ -16,15 +16,18 @@ final class FavoriteViewController: UIViewController {
 //    MARK: - Properties
     
     private let model: MainModel = .init()
-    private var model2: DetailItemModel?
     
 //    MARK: - UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        createSearchButtonInNavBar()
         configureApperance()
         model.loadPosts()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        createSearchButtonInNavBar()
     }
 }
 

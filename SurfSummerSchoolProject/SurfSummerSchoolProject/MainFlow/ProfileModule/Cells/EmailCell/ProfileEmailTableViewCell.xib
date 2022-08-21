@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="146" id="KGk-i7-Jjw" customClass="ProfileEmailTableViewCell" customModule="SurfSummerSchoolProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="417" height="146"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="417" height="146"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0s-CQ-nUu">
+                        <rect key="frame" x="16" y="16" width="41.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4a-uV-KiG">
+                        <rect key="frame" x="16" y="39" width="41.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="i4a-uV-KiG" secondAttribute="trailing" constant="100" id="0xf-al-1ix"/>
+                    <constraint firstItem="b0s-CQ-nUu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Gpe-TE-rLD"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="i4a-uV-KiG" secondAttribute="bottom" constant="17" id="MT5-WB-82q"/>
+                    <constraint firstItem="i4a-uV-KiG" firstAttribute="top" secondItem="b0s-CQ-nUu" secondAttribute="bottom" constant="2" id="cnM-vW-zBd"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="b0s-CQ-nUu" secondAttribute="trailing" constant="100" id="eXk-33-Ded"/>
+                    <constraint firstItem="b0s-CQ-nUu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="tWI-IL-ERU"/>
+                    <constraint firstItem="i4a-uV-KiG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="yju-b8-i3g"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="profileEmailAddressLabel" destination="i4a-uV-KiG" id="hrX-Aw-gpj"/>
+                <outlet property="profileEmailLabel" destination="b0s-CQ-nUu" id="bGW-cG-gVg"/>
+            </connections>
+            <point key="canvasLocation" x="207.97101449275365" y="118.52678571428571"/>
+        </tableViewCell>
+    </objects>
+</document>
